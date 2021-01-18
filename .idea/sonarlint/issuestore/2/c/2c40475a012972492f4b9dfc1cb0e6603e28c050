@@ -1,0 +1,25 @@
+
+G
+java:S1659+"*Declare "weatherState" on a separate line.(É¨ßÏ8‰‚©°ñ.
+o	java:S116""NRename this field "API" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È×¾Òþÿÿÿÿ8÷½¢°ñ.
+C
+java:S1170""!Make this final field static too.(È×¾Òþÿÿÿÿ8÷½¢°ñ.
+i	java:S116#"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëõ¨o8÷½¢°ñ.
+F
+java:S1659+")Declare "temperature" on a separate line.(É¨ßÏ8‰‚©°ñ.
+=
+java:S1170#"!Make this final field static too.(ëõ¨o8÷½¢°ñ.
+T
+java:S1135]"2Complete the task associated to this TODO comment.(žáÃæùÿÿÿÿ8óÇß°ñ.
+=
+java:S1170&"!Make this final field static too.(°“µ8Çæ£°ñ.
+X	java:S125s"<This block of commented-out lines of code should be removed.(Ì“ 8Ÿß€±ñ.
+t
+java:S3252\"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¥êêí8óÇß°ñ.
+C
+java:S1170'"!Make this final field static too.(Óý¥‰ýÿÿÿÿ8’›¥°ñ.
+t
+java:S3252\"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¥êêí8óÇß°ñ.
+X	java:S110"<This class has 9 parents which is greater than 5 authorized.(ÁâÊ×8Ñ†°ªñ.
+C
+java:S1170%"!Make this final field static too.(Ã’ö“øÿÿÿÿ8Çæ£°ñ.

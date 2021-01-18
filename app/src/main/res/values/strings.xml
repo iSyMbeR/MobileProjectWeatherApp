@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">RunnerApp</string>
+    <string name="login_text_info">Zaloguj się</string>
+    <string name="login_text_login_hint">Podaj login</string>
+    <string name="login_text_email_hint">Podaj e-mail</string>
+    <string name="login_text_password_hint">Podaj hasło</string>
+    <string name="login_switch_dark_mode">Zmien język</string>
+    <string name="login_confirm_button">Zaloguj</string>
+    <string name="login_register_view">Zaloguj</string>
+
+    <string name="register_text_info">Rejestracja</string>
+    <string name="register_text_login_hint">Podaj login</string>
+    <string name="register_text_email_hint">Podaj e-mail</string>
+    <string name="register_text_password_hint">Podaj hasło</string>
+    <string name="register_switch_dark_mode">Zmien język</string>
+    <string name="register_confirm_button">Zarejestruj</string>
+    <string name="register_radio_button_male">male</string>
+    <string name="register_radio_button_female">female</string>
+
+    <string name="profile_text_info">Witaj $user</string>
+
+
+</resources>

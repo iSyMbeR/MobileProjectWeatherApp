@@ -1,0 +1,16 @@
+
+G
+java:S1128"*Remove this unused import 'lombok.Setter'.(ó¸çµ8ĞÚ±ñ.
+G
+java:S1128"*Remove this unused import 'lombok.Getter'.(ùÒµÙ8ĞÚ±ñ.
+E
+java:S1659
+"#Declare "mIcon" on a separate line.(’½—¹üÿÿÿÿ8ÌÎ‡±ñ.
+L
+java:S1659
+"*Declare "mWeatherType" on a separate line.(’½—¹üÿÿÿÿ8šÊ„±ñ.
+E
+java:S1659
+"#Declare "mCity" on a separate line.(’½—¹üÿÿÿÿ8šÊ„±ñ.
+t
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ÒŠæ¸şÿÿÿÿ8¹œ ±ñ.
