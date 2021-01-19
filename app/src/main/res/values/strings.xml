@@ -19,6 +19,7 @@
     <string name="register_radio_button_female">female</string>
     <string name="register_accept_rule">Accept rules</string>
     <string name="register_newsletter">Newsletter</string>
+    <string name="register_login_button">Already Registered?</string>
 
 
     <string name="profile_weather_button">Check weather</string>

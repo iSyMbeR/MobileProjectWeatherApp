@@ -19,6 +19,7 @@
     <string name="register_accept_rule">Zaakceptuj regulamin</string>
     <string name="register_newsletter">Newsletter</string>
     <string name="register_logout">Wyloguj</string>
+    <string name="register_login_button">Już zarejestrowany?</string>
     <string name="profile_weather_button">Sprawdz pogode</string>
     <string name="profile_youtube_button">Włącz youtube</string>
     <string name="profile_photo_button">Zrób zdjęcie</string>

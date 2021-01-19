@@ -20,11 +20,6 @@ class SignInActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         fAuth = FirebaseAuth.getInstance()
-//        if (fAuth.currentUser != null) {
-//            startActivity(Intent(applicationContext, LoginActivity::class.java))
-//            finish()
-//        }
-
         setContentView(R.layout.activity_registery)
 
         editEmail(registerEmailText, registerWarnEmail)
@@ -35,6 +30,9 @@ class SignInActivity : Activity() {
         }
         signInChangeLanguage.setOnClickListener {
             changeLanguage()
+        }
+        signInLoginButton.setOnClickListener {
+            startActivity(Intent(applicationContext, LoginActivity::class.java))
         }
 
     }

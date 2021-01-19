@@ -22,6 +22,7 @@ class LoginActivity : AppCompatActivity() {
         setContentView(R.layout.activity_login)
         editEmail(loginLoginText, loginHint)
         editPassword(loginPasswordText, passwordHint)
+
         loginChangeLanguage.setOnClickListener {
             changeLanguage()
         }
@@ -31,7 +32,6 @@ class LoginActivity : AppCompatActivity() {
             var password: String = loginLoginText.text.toString()
             var email: String = loginPasswordText.text.toString()
                 checkUser(email, password)
-
         }
 
         loginSignUp.setOnClickListener {
@@ -78,9 +78,9 @@ class LoginActivity : AppCompatActivity() {
             conf.locale = locale;
             res.updateConfiguration(conf, dm);
         }
-        val refresh = Intent(this, SignInActivity::class.java)
+        val refresh = Intent(this, LoginActivity::class.java)
         startActivity(refresh)
-        this.finish()
+            this.finish()
     }
 }
 
