@@ -1,25 +1,24 @@
 package pl.edu.pb.runnerapp;
 
+import android.util.Log;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import lombok.Getter;
-import lombok.Setter;
-
 public class WeatherData {
-    private String mTemperature, mIcon, mCity, mWeatherType;
+    private String temperature, icon, city, weatherType;
     private int mCondition;
 
     public static WeatherData fromJson(JSONObject jsonObject) {
         try {
             WeatherData weatherData = new WeatherData();
-            weatherData.mCity = jsonObject.getString("name");
+            weatherData.city = jsonObject.getString("name");
             weatherData.mCondition = jsonObject.getJSONArray("weather").getJSONObject(0).getInt("id");
-            weatherData.mWeatherType = jsonObject.getJSONArray("weather").getJSONObject(0).getString("main");
-            weatherData.mIcon = updateWeatherIcon(weatherData.mCondition);
+            weatherData.weatherType = jsonObject.getJSONArray("weather").getJSONObject(0).getString("main");
+            weatherData.icon = updateWeatherIcon(weatherData.mCondition);
             double tempResult = jsonObject.getJSONObject("main").getDouble("temp") - 273.15;
             int roundedValue = (int) Math.rint(tempResult);
-            weatherData.mTemperature = Integer.toString(roundedValue);
+            weatherData.temperature = Integer.toString(roundedValue);
             return weatherData;
         } catch (JSONException e) {
             e.printStackTrace();
@@ -59,19 +58,20 @@ public class WeatherData {
         return "dunno";
     }
 
-    public String getmTemperature() {
-        return mTemperature + "°C";
+    public String getTemperature() {
+        return temperature + "°C";
     }
 
-    public String getmIcon() {
-        return mIcon;
+    public String getIcon() {
+        Log.d("blond", "kondycja " + mCondition);
+        return icon;
     }
 
-    public String getmCity() {
-        return mCity;
+    public String getCity() {
+        return city;
     }
 
-    public String getmWeatherType() {
-        return mWeatherType;
+    public String getWeatherType() {
+        return weatherType;
     }
 }

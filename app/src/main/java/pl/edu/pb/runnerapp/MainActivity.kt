@@ -13,5 +13,6 @@ class MainActivity : Activity() {
         super.onCreate(savedInstanceState)
         Log.d("CHECKUJE"," ON CREATE ACTIVIMAIN");
         setContentView(R.layout.activity_login)
+
     }
 }
