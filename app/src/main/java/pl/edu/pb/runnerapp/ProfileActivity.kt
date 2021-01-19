@@ -1,9 +1,11 @@
 package pl.edu.pb.runnerapp
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.Intent.ACTION_VIEW
 import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -38,6 +40,21 @@ class ProfileActivity : AppCompatActivity() {
             FirebaseAuth.getInstance().signOut();
             startActivity(Intent(applicationContext,LoginActivity::class.java))
             finish()
+        }
+        profilePhotoButton.setOnClickListener {
+            dispatchTakePictureIntent()
+        }
+    }
+
+
+    val REQUEST_IMAGE_CAPTURE = 1
+
+    private fun dispatchTakePictureIntent() {
+        val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        try {
+            startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+        } catch (e: ActivityNotFoundException) {
+            // display error state to the user
         }
     }
 
