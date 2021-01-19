@@ -20,11 +20,20 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
 import org.json.JSONObject;
+
+import java.util.HashMap;
 
 import cz.msebera.android.httpclient.Header;
 
@@ -42,7 +51,7 @@ public class WeatherActivity extends AppCompatActivity {
     String locationProvider = LocationManager.GPS_PROVIDER;
 
     TextView nameOfCity, weatherState, temperature;
-    ImageView weatherIcon;
+    ImageView weatherIcon, backButton;
     RelativeLayout cityFinder;
     LocationManager locationManager;
     LocationListener locationListener;
@@ -53,33 +62,42 @@ public class WeatherActivity extends AppCompatActivity {
         setContentView(R.layout.activity_weather);
 
         weatherState = findViewById(R.id.weatherCondition);
-        temperature = findViewById(R.id.temperature);
+        temperature = findViewById(R.id.weatherTemperature);
         weatherIcon = findViewById(R.id.weatherIcon);
-        cityFinder = findViewById(R.id.cityFinder);
-        nameOfCity = findViewById(R.id.cityName);
-
+        cityFinder = findViewById(R.id.weatherCityFinder);
+        nameOfCity = findViewById(R.id.weatherCityName);
+        backButton = findViewById(R.id.weatherBackImage);
         cityFinder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WeatherActivity.this, cityFinder.class);
                 startActivity(intent);
-
             }
         });
-    }
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WeatherActivity.this, SignInActivity.class);
+                startActivity(intent);
+            }
+        });
 
-//    @Override
-//    protected void onResume() {
-//        super.onResume();
-//        getWeatherForCurrentLocation();
-//    }
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WeatherActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
+    }
 
     @Override
     protected void onResume() {
         super.onResume();
         Intent intent = getIntent();
         String city = intent.getStringExtra("city");
-        if (city != null){
+        if (city != null) {
             getWeatherForNewCity(city);
         } else {
             getWeatherForCurrentLocation();
@@ -88,7 +106,7 @@ public class WeatherActivity extends AppCompatActivity {
 
     private void getWeatherForNewCity(String city) {
         RequestParams requestParams = new RequestParams();
-        requestParams.put("q",city);
+        requestParams.put("q", city);
         requestParams.put("appid", API);
         letsDoSomeNetworking(requestParams);
     }
@@ -124,14 +142,13 @@ public class WeatherActivity extends AppCompatActivity {
 
     private void letsDoSomeNetworking(RequestParams requestParams) {
         AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
-        asyncHttpClient.get(URL, requestParams, new JsonHttpResponseHandler(){
+        asyncHttpClient.get(URL, requestParams, new JsonHttpResponseHandler() {
             @Override
             public void onSuccess(int statusCode, Header[] headers, JSONObject response) {
                 Toast.makeText(WeatherActivity.this, "Data get Success", Toast.LENGTH_SHORT).show();
 
                 WeatherData weatherData = WeatherData.fromJson(response);
                 updateUI(weatherData);
-
             }
         });
     }
@@ -140,16 +157,14 @@ public class WeatherActivity extends AppCompatActivity {
         temperature.setText(weatherData.getTemperature());
         nameOfCity.setText(weatherData.getCity());
         weatherState.setText(weatherData.getWeatherType());
-        int resourceId = getResources().getIdentifier(weatherData.getIcon(),"drawable",getPackageName());
-        Log.d(TAG, "dodaje ikone");
+        int resourceId = getResources().getIdentifier(weatherData.getIcon(), "drawable", getPackageName());
         weatherIcon.setImageResource(resourceId);
-        Log.d(TAG, "dodano ikone");
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        if(locationManager != null){
+        if (locationManager != null) {
             locationManager.removeUpdates(locationListener);
         }
     }

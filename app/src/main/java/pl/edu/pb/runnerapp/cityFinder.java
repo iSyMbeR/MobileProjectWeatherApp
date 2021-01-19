@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
@@ -36,5 +37,8 @@ public class cityFinder extends AppCompatActivity {
                return false;
            }
        });
+        Log.d("blond",appName);
     }
+    String appName = String.valueOf(R.string.app_name);
+
 }

@@ -1,23 +1,39 @@
 <resources>
     <string name="app_name">RunnerApp</string>
-    <string name="login_text_info">Zaloguj się</string>
-    <string name="login_text_login_hint">Podaj login</string>
-    <string name="login_text_email_hint">Podaj e-mail</string>
-    <string name="login_text_password_hint">Podaj hasło</string>
-    <string name="login_switch_dark_mode">Zmien język</string>
-    <string name="login_confirm_button">Zaloguj</string>
-    <string name="login_register_view">Zaloguj</string>
+    <string name="login_text_info">Log in</string>
+    <string name="loginEmailHint">E-mail</string>
+    <string name="login_text_email_hint">E-mail</string>
+    <string name="login_text_password_hint">Password</string>
+    <string name="login_switch_dark_mode">change Language</string>
+    <string name="login_confirm_button">Login</string>
+    <string name="login_register_view">Sign up</string>
 
-    <string name="register_text_info">Rejestracja</string>
-    <string name="register_text_login_hint">Podaj login</string>
-    <string name="register_text_email_hint">Podaj e-mail</string>
-    <string name="register_text_password_hint">Podaj hasło</string>
-    <string name="register_switch_dark_mode">Zmien język</string>
-    <string name="register_confirm_button">Zarejestruj</string>
+    <string name="register_text_info">Create your account</string>
+    <string name="register_text_login_hint">User Name</string>
+    <string name="register_text_email_hint">E-mail</string>
+    <string name="register_text_password_hint">Password</string>
+    <string name="register_switch_dark_mode">change Language</string>
+    <string name="register_logout">Logout</string>
+    <string name="register_confirm_button">Confirm</string>
     <string name="register_radio_button_male">male</string>
     <string name="register_radio_button_female">female</string>
+    <string name="register_accept_rule">Accept rules</string>
+    <string name="register_newsletter">Newsletter</string>
 
-    <string name="profile_text_info">Witaj $user</string>
+
+    <string name="profile_weather_button">Check weather</string>
+    <string name="profile_youtube_button">Go youtubee</string>
+    <string name="profile_photo_button">Make a photo</string>
+    <string name="profile_text_info">Hello $user</string>
+
+
+    <string name="weather_search_more">Check other cities</string>
+    <string name="weather_city_name">Wait ...</string>
+
+    <string name="cityFinder_search_city">Enter City Name</string>
+
+
+
 
 
 </resources>

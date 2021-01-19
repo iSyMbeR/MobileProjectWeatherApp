@@ -18,13 +18,12 @@
         android:usesCleartextTraffic="true">
         <activity android:name=".cityFinder"/>
         <activity android:name=".MainActivity" />
-        <activity android:name=".profileActivity" />
-        <activity android:name=".RegisteryActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".WeatherActivity">
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".SignInActivity" />
+        <activity android:name=".WeatherActivity" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
