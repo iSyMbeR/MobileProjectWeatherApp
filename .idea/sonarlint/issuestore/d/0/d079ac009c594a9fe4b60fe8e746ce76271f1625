@@ -1,16 +1,15 @@
 
-E
-java:S1659
-"#Declare "mCity" on a separate line.(’½—¹üÿÿÿÿ8šÊ„±ñ.
-t
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ÒŠæ¸şÿÿÿÿ8¹œ ±ñ.
-E
-java:S1659
-"#Declare "mIcon" on a separate line.(’½—¹üÿÿÿÿ8ÌÎ‡±ñ.
+D
+java:S1659""Declare "city" on a separate line.(°ı¡Øıÿÿÿÿ8ÿºÍñ.
 L
-java:S1659
-"*Declare "mWeatherType" on a separate line.(’½—¹üÿÿÿÿ8šÊ„±ñ.
-G
-java:S1128"*Remove this unused import 'lombok.Setter'.(ó¸çµ8ĞÚ±ñ.
-G
-java:S1128"*Remove this unused import 'lombok.Getter'.(ùÒµÙ8ĞÚ±ñ.
+java:S1444"*Make this "public static lang" field final(„€Š“ûÿÿÿÿ8‡™ğÕñ.
+r
+java:S1104"PMake lang a static final constant or non-public and provide accessors if needed.(„€Š“ûÿÿÿÿ8‡™ğÕñ.
+P
+java:S1128".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8íÑ‡Öñ.
+t
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 21 to the 15 allowed.(ÒŠæ¸şÿÿÿÿ8¹œ ±ñ.
+K
+java:S1659")Declare "weatherType" on a separate line.(°ı¡Øıÿÿÿÿ8š·»Íñ.
+D
+java:S1659""Declare "icon" on a separate line.(°ı¡Øıÿÿÿÿ8«ÃºÍñ.

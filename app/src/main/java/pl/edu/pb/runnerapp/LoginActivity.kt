@@ -29,8 +29,9 @@ class LoginActivity : AppCompatActivity() {
 
 
         loginConfirmButton.setOnClickListener {
-            var password: String = loginLoginText.text.toString()
-            var email: String = loginPasswordText.text.toString()
+            var password: String = loginPasswordText.text.toString()
+            var email: String = loginLoginText.text.toString()
+
                 checkUser(email, password)
         }
 

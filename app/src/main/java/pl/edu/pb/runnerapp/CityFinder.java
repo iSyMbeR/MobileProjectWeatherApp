@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class cityFinder extends AppCompatActivity {
+public class CityFinder extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +31,7 @@ public class cityFinder extends AppCompatActivity {
            @Override
            public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                String newCity = editText.getText().toString();
-               Intent intent = new Intent(cityFinder.this, WeatherActivity.class);
+               Intent intent = new Intent(CityFinder.this, WeatherActivity.class);
                intent.putExtra("city", newCity);
                startActivity(intent);
                return false;

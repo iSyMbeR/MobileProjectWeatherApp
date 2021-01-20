@@ -1,24 +1,44 @@
 
-o	java:S116""NRename this field "API" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È×¾Òşÿÿÿÿ8÷½¢°ñ.
-i	java:S116#"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëõ¨o8÷½¢°ñ.
+O
+java:S1128"-Remove this unused import 'android.util.Log'.(Ô¦Ø²øÿÿÿÿ8ÈÜóÕñ.
+X	java:S110)"<This class has 9 parents which is greater than 5 authorized.(ÁâÊ×8¼ÌâÙñ.
+\
+java:S1128"@Remove this unused import 'com.google.firebase.auth.AuthResult'.(âÂ8ÇèñÜñ.
+C
+java:S1170,"!Make this final field static too.(È×¾Òşÿÿÿÿ8÷½¢°ñ.
+[
+java:S1128">Remove this unused import 'com.google.android.gms.tasks.Task'.(¦âÏô8ÇèñÜñ.
+C
+java:S1170/"!Make this final field static too.(Ã’ö“øÿÿÿÿ8Çæ£°ñ.
+u
+java:S3252"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¥êêí8ïßïÚñ.
+i
+java:S1128"LRemove this unused import 'com.google.firebase.firestore.DocumentReference'.(«Ë8ÄéĞÚñ.
+u
+java:S3252"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¥êêí8ïßïÚñ.
 F
-java:S1659+")Declare "temperature" on a separate line.(É¨ßÏ8‰‚©°ñ.
-T
-java:S1135\"2Complete the task associated to this TODO comment.(áÃæùÿÿÿÿ8óÇß°ñ.
+java:S16595")Declare "temperature" on a separate line.(É¨ßÏ8¼ÌâÙñ.
+o	java:S116,"NRename this field "API" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È×¾Òşÿÿÿÿ8÷½¢°ñ.
+g
+java:S1128"JRemove this unused import 'com.google.firebase.database.FirebaseDatabase'.(×Ë—8ù®Úñ.
+i
+java:S1128"LRemove this unused import 'com.google.firebase.firestore.FirebaseFirestore'.(§ä…ª8º¥ñÜñ.
+E
+java:S16596"(Declare "backButton" on a separate line.(´¡İ¾8¼ÌâÙñ.
+d
+java:S1128"BRemove this unused import 'com.google.firebase.auth.FirebaseAuth'.(İÄğöûÿÿÿÿ8º¥ñÜñ.
 =
-java:S1170#"!Make this final field static too.(ëõ¨o8÷½¢°ñ.
+java:S1170-"!Make this final field static too.(ëõ¨o8¼ÌâÙñ.
 C
-java:S1170'"!Make this final field static too.(Óı¥‰ıÿÿÿÿ8’›¥°ñ.
-t
-java:S3252["WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¥êêí8óÇß°ñ.
-C
-java:S1170""!Make this final field static too.(È×¾Òşÿÿÿÿ8÷½¢°ñ.
-t
-java:S3252["WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¥êêí8óÇß°ñ.
+java:S11701"!Make this final field static too.(Óı¥‰ıÿÿÿÿ8¼ÌâÙñ.
+U
+java:S1135‚"2Complete the task associated to this TODO comment.(áÃæùÿÿÿÿ8ïßïÚñ.
+P
+java:S1128$".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ8º¥ñÜñ.
 =
-java:S1170&"!Make this final field static too.(°“µ8Çæ£°ñ.
+java:S11700"!Make this final field static too.(°“µ8Çæ£°ñ.
 G
-java:S1659+"*Declare "weatherState" on a separate line.(É¨ßÏ8‰‚©°ñ.
-X	java:S110"<This class has 9 parents which is greater than 5 authorized.(ÁâÊ×8Ñ†°ªñ.
-C
-java:S1170%"!Make this final field static too.(Ã’ö“øÿÿÿÿ8Çæ£°ñ.
+java:S16595"*Declare "weatherState" on a separate line.(É¨ßÏ8‰‚©°ñ.
+n
+java:S1128"LRemove this unused import 'com.google.android.gms.tasks.OnCompleteListener'.(Çğ¸Òÿÿÿÿÿ8ÇèñÜñ.
+i	java:S116-"NRename this field "URL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëõ¨o8¼ÌâÙñ.
