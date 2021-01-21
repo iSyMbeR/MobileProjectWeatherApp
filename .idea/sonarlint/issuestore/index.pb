@@ -35,3 +35,9 @@ h
 8app/src/main/java/pl/edu/pb/runnerapp/ProfileActivity.kt,7\8\780517c8bba026bcb3890e90648ba377ef9baa95
 g
 7app/src/main/java/pl/edu/pb/runnerapp/SignInActivity.kt,b\2\b2d4585594871f6901799d3569bab2bff949d9d4
+`
+0app/src/main/res/layout/activity_city_finder.xml,0\6\069ef449279e035472c70f19a1fefc3255f684bb
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+e
+5app/src/main/java/pl/edu/pb/runnerapp/CityFinder.java,2\e\2e8325fc9c7048a903a0c5b0856e53b2eb5dbe5e

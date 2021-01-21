@@ -61,6 +61,9 @@ class SignInActivity : Activity() {
     }
 
     fun submitData() {
+        if (registerEmailText.text.length < 5 || registeryPasswordText.text.length < 6) {
+            return
+        }
         if (!signInAcceptRules.isChecked) {
             Toast.makeText(applicationContext, "Please accept rules", Toast.LENGTH_SHORT)
                 .show()

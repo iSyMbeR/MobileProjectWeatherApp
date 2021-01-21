@@ -1,9 +1,11 @@
 package pl.edu.pb.runnerapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import android.widget.Toast.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat.startActivity
 import com.google.android.gms.tasks.OnCompleteListener
@@ -20,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         firebaseAuth = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_login)
-        editEmail(loginLoginText, loginHint)
+//        editEmail(loginLoginText, loginHint)
         editPassword(loginPasswordText, passwordHint)
 
         loginChangeLanguage.setOnClickListener {
@@ -29,10 +31,9 @@ class LoginActivity : AppCompatActivity() {
 
 
         loginConfirmButton.setOnClickListener {
-            var password: String = loginPasswordText.text.toString()
-            var email: String = loginLoginText.text.toString()
-
-                checkUser(email, password)
+            var password: String = loginPasswordText.text.toString().trim()
+            var email: String = loginLoginText.text.toString().trim()
+            checkUser(email, password)
         }
 
         loginSignUp.setOnClickListener {
@@ -43,18 +44,21 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun checkUser(userEmail: String, userPassword: String) {
+        if (userEmail.length <= 5 || userPassword.length <= 6) {
+            return
+        }
         firebaseAuth.signInWithEmailAndPassword(userEmail, userPassword)
             .addOnCompleteListener(OnCompleteListener<AuthResult?> { task ->
                 if (task.isSuccessful) {
-                    Toast.makeText(applicationContext, "User created", Toast.LENGTH_LONG)
+                    makeText(applicationContext, "User created", LENGTH_LONG)
                         .show()
                     startActivity(Intent(applicationContext, ProfileActivity::class.java))
                     finish()
                 } else {
-                    Toast.makeText(
+                    makeText(
                         applicationContext,
                         "Error !" + task.exception!!.message,
-                        Toast.LENGTH_LONG
+                        LENGTH_LONG
                     )
                         .show()
                 }
@@ -81,7 +85,7 @@ class LoginActivity : AppCompatActivity() {
         }
         val refresh = Intent(this, LoginActivity::class.java)
         startActivity(refresh)
-            this.finish()
+        this.finish()
     }
 }
 

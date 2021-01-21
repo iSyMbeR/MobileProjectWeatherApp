@@ -18,7 +18,7 @@ fun editPassword(password: EditText, warnPassword: TextView){
         }
 
         override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-            if(password.length() <= 6){
+            if(password.length() < 6){
                 warnPassword.setText("Password too short")
                 warnPassword.visibility = TextView.VISIBLE
             } else {
