@@ -48,7 +48,6 @@ public class TodoActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     public static FirebaseUser firebaseUser;
     private String onlineUserID;
-
     private ProgressDialog loader;
     private String key = "";
     private String task;
@@ -184,6 +183,15 @@ public class TodoActivity extends AppCompatActivity {
                 holder.setTask(model.getTask());
                 holder.setDesc(model.getDescription());
 
+                holder.mView.setOnClickListener(new View.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        key = getRef(position).getKey();
+                        task = model.getTask();
+                        description = model.getDescription();
+                        updateOrDeleteTask();
+                    }
+                });
             }
 
             @NonNull
@@ -196,6 +204,65 @@ public class TodoActivity extends AppCompatActivity {
 
         recyclerView.setAdapter(adapter);
         adapter.startListening();
+    }
+
+    private void updateOrDeleteTask(){
+        AlertDialog.Builder myDialog = new AlertDialog.Builder(this);
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View view = inflater.inflate(R.layout.update_todo_data, null);
+        myDialog.setView(view);
+
+        final AlertDialog dialog = myDialog.create();
+        final EditText mTask = view.findViewById(R.id.editTextTask);
+        final EditText mDescription = view.findViewById(R.id.editTextDescription);
+        mTask.setText(task);
+        mTask.setSelection(task.length());
+        mDescription.setText(description);
+        mDescription.setSelection(description.length());
+        Button delButton = view.findViewById(R.id.deleteButton);
+        Button updateButton = view.findViewById(R.id.updateButton);
+
+        updateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                task = mTask.getText().toString().trim();
+                description = mDescription.getText().toString().trim();
+
+                String date = DateFormat.getDateInstance().format(new Date());
+
+                TaskModel taskModel = new TaskModel(key,task,description,date);
+                databaseReference.child(key).setValue(taskModel).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(TodoActivity.this, "Task has been updated", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(TodoActivity.this, " Failed to update task" +task.getException() ,Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+                dialog.dismiss();
+            }
+        });
+
+        delButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                databaseReference.child(key).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if(task.isSuccessful()){
+                            Toast.makeText(TodoActivity.this, "Task has been deleted", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(TodoActivity.this, " Failed to delete task " + task.getException() ,Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
