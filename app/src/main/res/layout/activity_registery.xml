@@ -110,6 +110,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
         android:hint=".."
         android:textColor="#FBFBFB"
         android:textColorHighlight="#FFFFFF"
@@ -117,7 +118,7 @@
         android:textColorLink="#FFFFFF"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registeryLoginText" />
 
@@ -125,20 +126,18 @@
         android:id="@+id/registerWarnPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:layout_marginBottom="460dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
         android:hint=".."
         android:textColor="#FBFBFB"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textColorLink="#FFFFFF"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registeryPasswordText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/registeryPasswordText" />
 
     <Button
         android:id="@+id/registeryConfirmButton"
@@ -163,6 +162,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="344dp"
+        android:gravity="center_horizontal"
         android:hint=".."
         android:textColor="#FBFBFB"
         android:textColorHighlight="#FFFFFF"
@@ -171,7 +171,7 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.342"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerEmailText"
         app:layout_constraintVertical_bias="0.0" />
@@ -185,8 +185,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/registerWarnEmail"
-        app:layout_constraintVertical_bias="0.047">
+        app:layout_constraintTop_toBottomOf="@+id/registerEmailText"
+        app:layout_constraintVertical_bias="0.17">
 
         <RadioGroup
             android:id="@+id/registerChooseSexRadioGroup"

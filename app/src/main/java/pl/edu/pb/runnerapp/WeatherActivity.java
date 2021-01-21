@@ -168,7 +168,14 @@ public class WeatherActivity extends AppCompatActivity {
                 Toast.makeText(WeatherActivity.this, "Location get Succesfully", Toast.LENGTH_SHORT).show();
                 getWeatherForCurrentLocation();
             } else {
-                // user denied the permission
+                Toast.makeText(WeatherActivity.this, "Turn on localization", Toast.LENGTH_SHORT).show();
+                try {
+                    Thread.sleep(2000);
+                } catch (InterruptedException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+              ;
             }
         }
     }

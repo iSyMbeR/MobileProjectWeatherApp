@@ -44,6 +44,9 @@ class ProfileActivity : AppCompatActivity() {
         profilePhotoButton.setOnClickListener {
             dispatchTakePictureIntent()
         }
+        profileTodoButton.setOnClickListener {
+            startActivity(Intent(applicationContext, TodoActivity::class.java))
+        }
     }
 
 

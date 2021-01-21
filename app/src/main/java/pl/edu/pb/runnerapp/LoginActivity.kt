@@ -1,18 +1,16 @@
 package pl.edu.pb.runnerapp
 
-import android.annotation.SuppressLint
+import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
-import android.widget.Toast.*
+import android.widget.Toast.LENGTH_LONG
+import android.widget.Toast.makeText
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat.startActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlinx.android.synthetic.main.activity_registery.*
 import java.util.*
 
 class LoginActivity : AppCompatActivity() {
@@ -22,7 +20,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         firebaseAuth = FirebaseAuth.getInstance();
         setContentView(R.layout.activity_login)
-//        editEmail(loginLoginText, loginHint)
         editPassword(loginPasswordText, passwordHint)
 
         loginChangeLanguage.setOnClickListener {
@@ -44,13 +41,13 @@ class LoginActivity : AppCompatActivity() {
     }
 
     fun checkUser(userEmail: String, userPassword: String) {
-        if (userEmail.length <= 5 || userPassword.length <= 6) {
+        if (userEmail.length <= 5 || userPassword.length < 6) {
             return
         }
         firebaseAuth.signInWithEmailAndPassword(userEmail, userPassword)
             .addOnCompleteListener(OnCompleteListener<AuthResult?> { task ->
                 if (task.isSuccessful) {
-                    makeText(applicationContext, "User created", LENGTH_LONG)
+                    makeText(applicationContext, "Logged in", LENGTH_LONG)
                         .show()
                     startActivity(Intent(applicationContext, ProfileActivity::class.java))
                     finish()

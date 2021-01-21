@@ -25,6 +25,7 @@
     <string name="profile_weather_button">Check weather</string>
     <string name="profile_youtube_button">Go youtubee</string>
     <string name="profile_photo_button">Make a photo</string>
+    <string name="profile_todo_button">Todo List</string>
     <string name="profile_text_info">Hello $user</string>
 
 
@@ -32,9 +33,7 @@
     <string name="weather_city_name">Wait ...</string>
 
     <string name="cityFinder_search_city">Enter City Name</string>
-
-
-
+    <string name="data" translatable="false">21.01.2021</string>
 
 
 </resources>

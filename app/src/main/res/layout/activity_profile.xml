@@ -23,8 +23,8 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="374dp"
-        android:layout_height="175dp"
+        android:layout_width="389dp"
+        android:layout_height="207dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,6 +66,19 @@
             android:layout_marginBottom="5dp"
             android:background="#E60D0D"
             android:text="@string/profile_youtube_button"
+            android:textColor="#FFFFFF"
+            android:textColorHighlight="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textColorLink="#FFFFFF"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/profileTodoButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:background="@android:color/holo_blue_bright"
+            android:text="@string/profile_todo_button"
             android:textColor="#FFFFFF"
             android:textColorHighlight="#FFFFFF"
             android:textColorHint="#FFFFFF"
