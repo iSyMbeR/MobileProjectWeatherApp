@@ -31,7 +31,7 @@ import cz.msebera.android.httpclient.Header;
 public class WeatherActivity extends AppCompatActivity {
 
     static final String TAG = "blond";
-    final String API = "66494e8a28d58af50edaf8644ca11237";
+    final String API = "";
     final String URL = "https://api.openweathermap.org/data/2.5/weather";
 
     final long minTime = 5000;
